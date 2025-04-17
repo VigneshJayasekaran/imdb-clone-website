@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 
 // Base URL for The Movie Database API
@@ -271,6 +270,22 @@ export const searchActors = async (query: string, page = 1) => {
   }
 };
 
+// New function to fetch actors by IDs
+export const searchActorsByIds = async (actorIds: number[]) => {
+  try {
+    // In a real app, this would call the actual API for each actor ID
+    // or a batch endpoint if available
+    
+    // For now, filter the mock data based on the provided IDs
+    const actorsData = mockActors.filter(actor => actorIds.includes(actor.id));
+    
+    return actorsData;
+  } catch (error) {
+    console.error('Error fetching actors by IDs:', error);
+    throw error;
+  }
+};
+
 // Mock Data
 const mockGenres: Genre[] = [
   { id: 28, name: 'Action' },
@@ -360,7 +375,7 @@ const mockMovies: Movie[] = [
     title: 'The Matrix',
     poster_path: '/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg',
     backdrop_path: '/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg',
-    overview: 'Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.',
+    overview: 'Set in the 22nd century, The Matrix tells the story of a computer hacker who infiltrates the subconscious of his targets and uses it to his advantage.',
     release_date: '1999-03-30',
     vote_average: 8.2,
     vote_count: 20767,
