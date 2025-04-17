@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { 
@@ -169,7 +168,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <Film className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl">MovieDB</span>
+          <span className="font-bold text-xl">IMDB</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -385,7 +384,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>MovieDB</SheetTitle>
+                <SheetTitle>IMDB</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col mt-6 space-y-4">
                 <SheetClose asChild>

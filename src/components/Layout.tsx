@@ -15,7 +15,7 @@ const Layout: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} MovieDB - A demo IMDB clone
+                © {new Date().getFullYear()} IMDB - A demo IMDB clone
               </p>
             </div>
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
